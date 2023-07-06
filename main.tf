@@ -1,8 +1,8 @@
 provider "azurerm" {
-  tenant_id = var.tenant_id
+  tenant_id       = var.tenant_id
   subscription_id = var.subscription_id
   features {}
-  
+
 }
 
 provider "hcp" {}
@@ -131,7 +131,7 @@ resource "azurerm_linux_virtual_machine" "futureApp" {
 }
 
 locals {
-  dnsregion = lower(replace(var.location, "/\\s+/" , ""))
+  dnsregion = lower(replace(var.location, "/\\s+/", ""))
 }
 
 resource "azurerm_virtual_machine_extension" "vmext" {
