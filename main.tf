@@ -5,7 +5,9 @@ provider "azurerm" {
 
 }
 
-provider "hcp" {}
+provider "hcp" {
+  project_id = var.hcp_project_id
+}
 
 resource "azurerm_resource_group" "myresourcegroup" {
   name     = "${var.prefix}-workshop"

@@ -68,3 +68,8 @@ variable "admin_password" {
   sensitive   = true
   default     = "Demolabpass1!"
 }
+
+variable "hcp_project_id" {
+  description = "HCP Project Id"
+  default     = "8f401e26-b086-451f-b61a-4ffb6dd26304"
+}
